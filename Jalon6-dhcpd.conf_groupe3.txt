@@ -1,0 +1,47 @@
+#Nom du serveur DHCP
+server-name lxserv-58;
+
+#Domaine
+option domain-name "tp58.local";
+
+#PXE, permettre le boot reseau
+allow bootp;
+allow booting;
+
+#Verifie si l’adresse est déjà attribuée
+ping-check = 1;
+
+#Mode autoritaire (indique que ce serveur dhcp est prioritaire sur d’autres)
+authoritative;
+
+#Pas de mise à jour dynamique du DNS. Activer cette option est très utile #pour maintenir à jour les enregistrements du serveur DNS, pour le faire #remplacez none par standard (voir man dhcpd.conf). Il faut que le #serveur DNS accepte les mises à jour dynamiques.
+#ddns-update-style none;
+
+#deny ou allow les clients inconnus
+allow unknown-clients;
+
+#La durée du bail si le client n’en demande pas un plus long.
+default-lease-time 3600;
+
+#La durée maximum du bail même si le client demande un plus long.
+max-lease-time 86400;
+
+#IP du serveur DNS à délivrer – même principe, on peut spécifier cette #directive dans un sous-réseau précis à la place. Mettez bien l’ip et non le #nom d’hôte.
+#option domain-name-servers 192.168.58.1;
+
+#Netmask à délivrer – ajoutez cette directive si le subnet est identique pour #tous les sous-reseaux. Si ce n’est pas le cas, ne la mettez pas puisque le #subnet sera indiqué dans la déclaration de sous-réseau.
+option subnet-mask 255.255.255.0;
+
+#DECLARATION D’UN SOUS-RESEAU
+subnet 192.168.58.0 netmask 255.255.255.0 {
+
+#PLAGE d’IP à délivrer
+range 192.168.58.10 192.168.58.20;
+
+#GATEWAY par défaut
+option routers 192.168.58.1;
+
+#L’adresse de broadcast du sous-réseau
+#option broadcast-address 192.168.58.255;
+
+}

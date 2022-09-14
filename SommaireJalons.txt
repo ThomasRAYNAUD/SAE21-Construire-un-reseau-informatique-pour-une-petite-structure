@@ -1,0 +1,77 @@
+jalon1
+	Fournir le plan d'adressage IP au format pdf
+
+jalon2
+	Fournir les information suivantes sur le Raspberry Pi:
+
+	- le numéro de série du Raspberry Pi et ses deux adresses MAC
+
+	- photo de l'activation du network boot
+
+	- photo du boot PXE
+
+	le  tout au format pdf
+
+jalon3
+	simulation des serveurs et relais DHCP (fichier packet tracer)
+
+jalon4
+	 configuration IP statique du serveur PXE + route au format txt
+
+	fichier /etc/network/interfaces au format txt
+
+jalon5
+	fichier startup-config de configuration du routeur cisco relais dhcp
+
+	au format  txt
+
+jalon6
+	 configuration du serveur DHCP /etc/default/isc-dhcp-server et /etc/dhcp/dhcpd.conf
+
+	avec les réservations d'adresses pour les clients
+
+	au format  txt
+
+jalon7
+	fournir la capture Wireshark avec uniquement les échanges dhcp entre le serveur pxe et le raspberry pi
+
+	au format pcap ou pcapng
+
+jalon8
+	1 - Configuration tftp: fournir le fichier /etc/default/tftpd-hpa
+
+	au format  txt
+
+	2 - fichier de configuration du routeur
+
+	au format  txt
+
+jalon9
+	- configuration du serveur NFS avec le fichier /etc/exports au format  txt
+
+	- fichier cmdline.txt
+
+jalon10
+	Configuration du serveur ssh:
+
+	fournir le fichier de configuration /etc/ssh/sshd_config
+
+	fournir les fingerprint du routeur et du raspberry pi présents dans .ssh/known_hosts
+
+	au format .txt
+
+jalon11
+	Fournir la configuration du switch avec VLAN et sécurisation
+
+	au format .txt
+
+jalon12
+	Demander un deuxième Raspberry Pi à l'enseignant et le faire démarrer sur le réseau comme le premier
+
+	Fournir toutes les modifications réalisées dans un document au format pdf
+
+jalon13
+	Rapport au format pdf
+
+jalon14
+	Diaporama de la soutenance au format pdf
